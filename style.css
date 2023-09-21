@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+body{
+    display: grid;
+    justify-content:center;
+    width:100vw;
+    min-height:100vh;
+    position:relative;
+    background-color: whitesmoke;
+    font-family: 'Rubik', sans-serif;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+main{
+    background: url('./images/pattern-bg-mobile.png') no-repeat;
+    width: 375px;
+}
+.display_board{
+    padding:2rem;
+}
+.display_board h2{
+    text-align:center
+}
+.search{
+   display:flex;
+   margin-top: 1.5rem;
+}
+.search input{
+    height:3rem;
+    width:80%;
+    border:none;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    padding:1.5rem;
+    outline: none;
+    
+}
+.Ipsearch{
+    font-weight: 500;
+    font-family: 'Rubik', sans-serif;
+}
+.search button{
+    height:3rem;
+    width:20%;
+    border:none;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background-color: black;
+}
+  .overlay__container{
+    position: relative;
+  }
+  .map__container {
+    position: relative;
+    top:8rem;
+    z-index: 1; 
+    background: url('./images/pattern-bg-desktop.png') no-repeat;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    padding-top: 2rem;
+
+  }
+  
+.mapinfo{
+    display:grid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; 
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: white;
+    text-align: center;
+    padding:1.5rem 1.5rem;
+    border-radius: 0.7rem;
+}
+.address:not(:last-child){
+    padding-bottom:1.5rem ;
+}
+.small{
+    font-size:0.7rem;
+    font-weight: 400;
+}
+.display{
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top:0.5rem;
+}
+.attribution{
+    margin-top:auto;
+}

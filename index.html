@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="./index.js" defer></script>
+ 
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main">
+       <div class="display_board">
+          <h2> IP Address Tracker</h2>
+          <div class="search">
+            <input type="numbers" class="Ipsearch" max="15">
+            <button type="submit" class="submit"><img src="./images/icon-arrow.svg" alt="submit button" ></button>
+          </div>
+          <div class="overlay__container">
+           <div class="mapinfo">
+              <div class="address">
+                <small class="small">IP ADDRESS</small>
+                <p class="display IP">192.212.174.101</p>
+              </div>
+              <div class="address">
+                <small class="small">LOCATION</small>
+                <p class="display location">Brooklyn</p>
+              </div>
+              <div class="address">
+                <small class="small">TIMEZONE</small>
+                <p class="display time">UTC -04:00</p>
+              </div>
+              <div class="address">
+                <small class="small">ISP</small>
+                <p class="display internet">SpaceX starlink</p>
+              </div>
+            </div>
+
+         </div>
+        </div>
+        <div class="map__container" id="map"></div>
+   
+  </main>
+ 
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Soulbroda</a>.
+  </div>
+</body>
+</html>
