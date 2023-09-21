@@ -1,7 +1,8 @@
 const submitButton = document.querySelector(".submit");
 let map = null;
 async function fetchApiData() {
-    const input = document.querySelector(".Ipsearch").value; 
+    const inputted =  document.querySelector(".Ipsearch")
+    const input =inputted.value; 
     const ipAddress = document.querySelector(".IP");
     const location = document.querySelector(".location");
     const time = document.querySelector(".time");
@@ -12,18 +13,17 @@ async function fetchApiData() {
         const ipApi = await fetch(apiUrl);
         if (ipApi.ok) {
             const data = await ipApi.json();
-            console.log(data);
-            console.log(input);
             ipAddress.textContent = data.ip;
             location.textContent = `${data.location.country}, ${data.location.region}`;
             time.textContent = `${ data.location.timezone}`;
             internetService.textContent = data.isp;
-    
+               inputted.value = "";
             if (map) {
                 map.remove();
             }
 
             // Create a new map using Leaflet and display it in the 'map' div
+            
             map = L.map('map').setView([data.location.lat, data.location.lng], 13);
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);

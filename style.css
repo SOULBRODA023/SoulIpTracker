@@ -19,15 +19,27 @@ img{
     display: block;
     max-width: 100%;
 }
+:root{
+    --VeryDarkGray: hsl(0, 0%, 17%);
+    --DarkGray: hsl(0, 0%, 59%);
+}
+.custom-marker {
+    background-image: url('./images/icon-arrow.svg'); 
+    width: 30px; 
+    height: 30px;
+}
+@media screen and (min-width:375px) {
+    
 main{
     background: url('./images/pattern-bg-mobile.png') no-repeat;
     width: 375px;
 }
 .display_board{
-    padding:2rem;
+    padding:1rem;
 }
 .display_board h2{
-    text-align:center
+    text-align:center;
+    color:white;
 }
 .search{
    display:flex;
@@ -61,6 +73,7 @@ main{
   .overlay__container{
     position: relative;
   }
+
   .map__container {
     position: relative;
     top:8rem;
@@ -84,21 +97,70 @@ main{
     margin-top: 1rem;
     background-color: white;
     text-align: center;
-    padding:1.5rem 1.5rem;
+    padding:1rem 1rem;
     border-radius: 0.7rem;
+    box-shadow: 5px 5px 10px var(--VeryDarkGray) ;
 }
 .address:not(:last-child){
-    padding-bottom:1.5rem ;
+    padding-bottom:1rem ;
 }
 .small{
     font-size:0.7rem;
-    font-weight: 400;
+    font-weight: 700;
+    color: var(--DarkGray);
 }
 .display{
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 700;
-    margin-top:0.5rem;
+    padding-top:0.5rem;
+    color: var(--VeryDarkGray);
 }
+}
+
+@media screen and (min-width: 720px) {
+   .display_board{
+    margin-top:1.5rem;
+   }
+    main {
+        background: url('./images/pattern-bg-desktop.png') no-repeat;
+        width: 100vw;
+    }
+    .search{
+        max-width:25rem;
+        margin-left:auto;
+        margin-right:auto;
+       
+    }
+    .Ipsearch, .submit{
+        cursor: pointer;
+    }
+    .mapinfo{
+        max-width:50rem;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        margin-top: 4rem;
+       
+    }
+    .address:not(:last-child){
+        border-right: 1px solid var(--VeryDarkGray);
+        height:100%;
+    }
+    .address{
+        text-align: left;
+        padding-left:1rem;
+    }
+    .address:last-child{
+        padding-bottom:1rem;
+    }
+}
+
+
+
+
+
+
 .attribution{
     margin-top:auto;
 }
